@@ -1,0 +1,115 @@
+body {
+    background-color: #666;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow:hidden;
+    margin:0px; padding:0px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body * {
+    position: absolute;
+    display: block;
+    margin:0px; padding:0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+container {
+    width:800px; height:600px;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    overflow:hidden;
+}
+
+sky {
+    background-image: url(../images/sky.png);
+    background-repeat: repeat-x;
+    width:1600px; height:600px;
+    animation: skyanimation 8s linear infinite;
+}
+
+plateau {
+    background-image: url(../images/plateau.png);
+    background-repeat: repeat-x;
+    width:1600px; height:331px;
+    animation: plateauanimation 3.4s linear infinite;
+}
+
+score {
+    color:white;
+    font-size : 22px;
+    padding:20px;
+}
+
+.animationpaused {
+    animation-play-state: paused;
+}
+
+car {
+    background-image: url(../images/car.png);
+    width:145px; height: 55px;
+    /*width:44px; height: 87px;*/
+}
+
+.crashed {
+    background-image: url(../images/crash.png);
+}
+
+wheel {
+    background-image: url(../images/wheel.png);
+    width:22px; height: 22px;
+}
+
+cloud {
+    background-image: url(../images/cloud.png);
+    width:150px; height: 57px;
+    animation: cloudanimation 19s linear infinite;
+}
+
+block {
+    background-image: url(../images/block.png);
+    width:32px; height: 31px;
+}
+
+long_block {
+    background-image: url(../images/long_block.png);
+    width:64px; height: 32px;
+}
+
+large_block {
+    background-image: url(../images/large_block.png);
+    width:64px; height: 64px;
+}
+
+coin {
+    background-image: url(../images/coin.png);
+    width:32px; height: 31px;
+}
+
+
+@keyframes cloudanimation {
+  0% {
+    transform: translate(800px, 30px);
+  }
+  100% {
+    transform: translate(-150px, 30px);
+  }
+}
+
+@keyframes plateauanimation {
+  0% {
+    transform: translate(0px, 269px);
+  }
+  100% {
+    transform: translate(-800px, 269px);
+  }
+}
+
+@keyframes skyanimation {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-800px, 0px);
+  }
+}
